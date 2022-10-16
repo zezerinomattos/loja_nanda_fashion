@@ -1,6 +1,10 @@
 /*
     font-family: 'Fredericka the Great', cursive;
     font-family: 'Titillium Web', sans-serif;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 */
 
 *{
@@ -11,9 +15,7 @@
     font-size: 16px;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+
 
 h1, h2{
     font-size: 350%;

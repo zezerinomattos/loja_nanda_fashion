@@ -1,0 +1,25 @@
+.navbar{
+    background-color: #FEE1D1;
+}
+
+a img.img-navebar-logo{
+    width: 30%;
+    margin-left: 8rem;
+}
+
+ul.navbar-ul li a{
+    font-size: 120%;
+    color: #000000;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+ul.navbar-ul li{
+    transition: .3s ease-out;
+}
+
+ul.navbar-ul li:hover{
+    background-color: #A65E52;
+    border-radius: 10px;
+    padding: 0px 20px;
+}
+

@@ -1,0 +1,7 @@
+header div.banner-principal{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0)), url(../../assets/img-nanda-fashion003.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+}

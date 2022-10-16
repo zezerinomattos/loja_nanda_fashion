@@ -1,9 +1,16 @@
 import React from 'react';
 
+// MEUS IMPORTS
+import './style.css';
+import Navbar from '../../components/navbar';
+
 function Home(){
     return(
         <>
-            <h1>home</h1>
+            <header>
+                <Navbar />
+                <div className='banner-principal'></div>
+            </header>
         </>
     );
 }
