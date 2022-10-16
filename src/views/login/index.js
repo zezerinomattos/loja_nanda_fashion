@@ -17,13 +17,17 @@ function Login(){
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
     const [msgTipo, setMsgTipo] = useState();
+    const [carregando, setCarregando] = useState()
 
     async function logar(){
+        setCarregando(1)
         await signInWithEmailAndPassword(auth, email, senha)
             .then(resposta => {
+                setCarregando(0)
                 setMsgTipo('sucesso');
             })
             .catch(erro => {
+                setCarregando(0)
                 setMsgTipo('erro');
             });
     }
@@ -39,7 +43,11 @@ function Login(){
                 
                     <input onChange={(e) => setSenha(e.target.value)} type="password" className="form-control my-2" id="floatingPassword" placeholder="Senha" />
                     
-                    <button onClick={logar} className="btn-login w-100 btn btn-lg btn-primary my-1" type="button">Entrar</button>
+                    {
+                        carregando ? <div class="spinner-border text-danger" role="status"><span class="visually-hidden">Loading...</span></div>
+                        :
+                        <button onClick={logar} className="btn-login w-100 btn btn-lg btn-primary my-1" type="button">Entrar</button>
+                    }
 
                     <div className='msg-login my-3 text-center'>
                         {msgTipo === 'sucesso' && <span><strong>Wow! </strong>Você está conectado!</span>}

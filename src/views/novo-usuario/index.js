@@ -17,19 +17,22 @@ function NovoUsuario(){
     const [senha, setSenha] = useState();
     const [msgTipo, setMsgTipo] = useState();
     const [msg, setMsg] = useState();
+    const [carregando, setCarregando] =useState();
 
     async function cadastrar(){
         setMsgTipo(null);
-
+        setCarregando(1);
         await createUserWithEmailAndPassword(auth, email, senha)
             .then(resposta => {
-                setMsgTipo('sucesso')
+                setCarregando(0);
+                setMsgTipo('sucesso');
                 setEmail('');
                 setSenha('');
             })
             .catch(erro => {
+                setCarregando(0);
                 setMsgTipo('erro');
-                alert(erro);
+               // console.log(erro);
                 switch (erro.message) {
                     case 'Firebase: Error (auth/admin-restricted-operation).':
                         setMsg('Para cadastrar um novo usuário é necessário inserir email e senha!');
@@ -61,13 +64,17 @@ function NovoUsuario(){
                 
                     <input onChange={(e) => setSenha(e.target.value)} type="password" value={senha} className="form-control my-2" id="floatingPassword" placeholder="Senha" />
                     
-                    <button onClick={cadastrar} className="btn-login w-100 btn btn-lg btn-primary my-1" type="button">Cadastrar</button>
-
+                    {
+                        carregando ? <div class="spinner-border text-danger" role="status"><span class="visually-hidden">Loading...</span></div>
+                        :
+                        <button onClick={cadastrar} className="btn-login w-100 btn btn-lg btn-primary my-1" type="button">Cadastrar</button> 
+                    }
+                    
                     <div className='msg-login my-3 text-center'>
                         {msgTipo === 'sucesso' && <span><strong>Wow! </strong>Você Cadastrou com Sucesso!</span>}
                         {msgTipo === 'erro' && <span><strong>Ops! </strong>{msg}</span>}
                     </div>
-                    
+   
                 </form>
             </main>
         </div>
