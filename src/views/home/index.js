@@ -7,9 +7,9 @@ import Navbar from '../../components/navbar';
 function Home(){
     return(
         <>
-            <header>
+            <header className="">
                 <Navbar />
-                <div className='banner-principal'></div>
+                <div className='container-fluid banner-principal'></div>
             </header>
         </>
     );
