@@ -10,6 +10,7 @@ function Home(){
             <header className="">
                 <Navbar />
                 <div className='container-fluid banner-principal'></div>
+                <h1>teste</h1>
             </header>
         </>
     );
