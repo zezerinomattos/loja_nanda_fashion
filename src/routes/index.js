@@ -9,6 +9,7 @@ import Login from '../views/login';
 import NovoUsuario from '../views/novo-usuario';
 import Home from '../views/home';
 import RecuperarSenha from '../views/recuperar-senha';
+import CadastrarProduto from '../views/cadastrar-produto';
 
 export default function Rotas(){
     return(
@@ -19,6 +20,7 @@ export default function Rotas(){
                     <Route path='/login' element={<Login />} />
                     <Route path='/novousuario' element={<NovoUsuario />} />
                     <Route path='/secuperarsenha' element={<RecuperarSenha />} />
+                    <Route path='/cadastrarproduto' element={<CadastrarProduto />} />
                 </Routes>
             </BrowserRouter>
         </Provider>
