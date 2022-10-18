@@ -15,7 +15,7 @@ function RecuperarSenha(){
     const [msg, setMsg] = useState();
 
     async function recuperarSenha(){
-        await sendPasswordResetEmail(email)
+        await sendPasswordResetEmail(auth ,email)
          .then(resposta => {
             setMsg('Enviamos um link no seu email para você redefinir a senha!');
          })
