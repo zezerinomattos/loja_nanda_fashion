@@ -1,0 +1,16 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+form button.btn-login{
+    background-color: #A65E52;
+    border: none;
+    color: #FFFFFF;
+    transition: 1s ease-out;
+}
+
+form button.btn-login:hover{
+    background-color: #D12B30;
+}

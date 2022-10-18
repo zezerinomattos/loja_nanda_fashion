@@ -67,7 +67,7 @@ function Login(){
 
                     
                     <div className="recuperar-senha mt-4 text-center">
-                        <a href="">Esqueceu a Senha?</a>
+                        <Link to="/secuperarsenha">Esqueceu a Senha?</Link>
                     </div>
                 </form>
             </main>

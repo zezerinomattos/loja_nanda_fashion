@@ -8,6 +8,7 @@ import store from '../store';
 import Login from '../views/login';
 import NovoUsuario from '../views/novo-usuario';
 import Home from '../views/home';
+import RecuperarSenha from '../views/recuperar-senha';
 
 export default function Rotas(){
     return(
@@ -17,6 +18,7 @@ export default function Rotas(){
                     <Route path='/' element={<Home />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/novousuario' element={<NovoUsuario />} />
+                    <Route path='/secuperarsenha' element={<RecuperarSenha />} />
                 </Routes>
             </BrowserRouter>
         </Provider>
