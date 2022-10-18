@@ -8,6 +8,9 @@ import './style.css';
 import logo from '../../assets/logo-Nanda.png';
 
 function Navbar(){
+
+    const dispatch = useDispatch();
+
     return(
         <nav className="navbar navbar-expand-lg ">
             <div className="container-fluid">
@@ -19,13 +22,23 @@ function Navbar(){
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mb-2 mb-lg-0 navbar-ul">
-                        <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>      
-                        <li className="nav-item"><Link className="nav-link" to="#">Produtos</Link></li>                      
-                        <li className="nav-item"><Link className="nav-link" to='#'>Contato</Link></li>
-
-                        <li className="nav-item"><Link className="nav-link" to='#'>Cadastrar Produtos</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to='/novousuario'>Cadastrar Usuário</Link></li>                        
-                        <li className="nav-item"><Link className="nav-link" to='#'>Sair</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li> 
+                        {    
+                            useSelector(state => state.usuarioLogado) > 0 ? 
+                                <>
+                                    <li className="nav-item"><Link className="nav-link" to="#">Produtos</Link></li>                      
+                                    <li className="nav-item"><Link className="nav-link" to='#'>Contato</Link></li>
+                                    <li className="nav-item"><Link className="nav-link" to='#'>Cadastrar Produtos</Link></li>
+                                    <li className="nav-item"><Link className="nav-link" to='/novousuario'>Cadastrar Usuário</Link></li>                        
+                                    <li className="nav-item " onClick={() => dispatch({type: 'LOG_OUT'})}><Link className="nav-link" to='#'>Sair</Link></li>
+                                </>
+                            :
+                                <>
+                                    <li className="nav-item"><Link className="nav-link" to="#">Produtos</Link></li>                      
+                                    <li className="nav-item"><Link className="nav-link" to='#'>Contato</Link></li>
+                                </>
+                            
+                        }
                     </ul>
                 </div>
 
