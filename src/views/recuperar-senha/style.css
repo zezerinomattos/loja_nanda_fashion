@@ -14,3 +14,9 @@ form button.btn-login{
 form button.btn-login:hover{
     background-color: #D12B30;
 }
+
+form div.recuperar-senha a{
+    font-size: 120%;
+    color: #D12B30;
+    text-decoration: none;
+}

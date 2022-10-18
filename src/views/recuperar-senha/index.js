@@ -8,6 +8,7 @@ import 'firebase/auth';
 import './style.css';
 import logo from '../../assets/logo-Nanda.png';
 import { sendPasswordResetEmail } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 function RecuperarSenha(){
 
@@ -25,6 +26,7 @@ function RecuperarSenha(){
     }
 
     return(
+
         <main className="login-content form-signin d-flex">
             <form className='mx-auto'>
                 <img className="my-3" src={logo} alt="Logo Nanda Fashion" width="110" height="85" />
@@ -37,6 +39,10 @@ function RecuperarSenha(){
                 </div>
 
                 <button onClick={recuperarSenha} className="btn-login w-100 btn btn-lg btn-primary my-1" type="button">Recuperar Senha</button>
+
+                <div className="recuperar-senha mt-4 text-center">
+                    <Link to="/login" class="mt-2">Voltar para a pagina de Login?</Link>
+                </div>
             </form>
         </main>
     );
