@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, Navigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { db, auth } from '../../config/firebase';
 import 'firebase/auth';
@@ -17,20 +18,24 @@ function Login(){
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
     const [msgTipo, setMsgTipo] = useState();
-    const [carregando, setCarregando] = useState()
+    const [carregando, setCarregando] = useState();
+
+    const dispatch = useDispatch();
 
     async function logar(){
         setCarregando(1)
         await signInWithEmailAndPassword(auth, email, senha)
             .then(resposta => {
-                setCarregando(0)
+                setCarregando(0);
                 setMsgTipo('sucesso');
+                dispatch({type: 'LOG_IN', usuarioEmail: email});
             })
             .catch(erro => {
                 setCarregando(0)
                 setMsgTipo('erro');
             });
     }
+
 
     return(
         <div className="text-center ">
