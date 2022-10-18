@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, Navigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 // MEUS IMPORTS
 import './style.css';
@@ -24,6 +25,7 @@ function Navbar(){
 
                         <li className="nav-item"><Link className="nav-link" to='#'>Cadastrar Produtos</Link></li>
                         <li className="nav-item"><Link className="nav-link" to='/novousuario'>Cadastrar Usuário</Link></li>                        
+                        <li className="nav-item"><Link className="nav-link" to='#'>Sair</Link></li>
                     </ul>
                 </div>
 
