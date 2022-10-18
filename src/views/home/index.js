@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { useSelector } from 'react-redux';
 
 // MEUS IMPORTS
 import './style.css';
@@ -16,6 +17,9 @@ function Home(){
                     <img src={imgCapaHeader} class="img-fluid banner-principal-img " alt="Imagem Capa" />
                 </div>
             </header>
+
+            <h1>{useSelector(state => state.usuarioLogado)}</h1>
+            <h1>Logado: {useSelector(state => state.usuarioEmail)}</h1>
         </>
     );
 }

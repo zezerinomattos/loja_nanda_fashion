@@ -28,7 +28,9 @@ function Login(){
             .then(resposta => {
                 setCarregando(0);
                 setMsgTipo('sucesso');
-                dispatch({type: 'LOG_IN', usuarioEmail: email});
+                setTimeout(()=>{
+                    dispatch({type: 'LOG_IN', usuarioEmail: email});
+                }, 1000);
             })
             .catch(erro => {
                 setCarregando(0)
@@ -36,9 +38,13 @@ function Login(){
             });
     }
 
-
     return(
         <div className="text-center ">
+
+            {
+                useSelector(state => state.usuarioLogado) > 0 ? <Navigate to='/' /> : null
+            }
+
             <main className="login-content form-signin d-flex">
                 <form className='mx-auto'>
                     <img className="my-5" src={logo} alt="Logo Nanda Fashion" width="110" height="85" />
