@@ -22,6 +22,11 @@ main.form-signin form button.btn-login:hover{
     background-color: #D12B30;
 }
 
+main.form-signin form div.recuperar-senha{
+    display: flex;
+    flex-direction: column;
+}
+
 main.form-signin form div.recuperar-senha a{
     font-size: 120%;
     color: #D12B30;

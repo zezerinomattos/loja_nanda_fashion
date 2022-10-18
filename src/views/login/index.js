@@ -66,8 +66,9 @@ function Login(){
                     </div>
 
                     
-                    <div className="recuperar-senha mt-4 text-center">
+                    <div className="recuperar-senha mt-1 text-center">
                         <Link to="/secuperarsenha">Esqueceu a Senha?</Link>
+                        <Link className='mt-2' to="/">Entrar sem fazer login?</Link>
                     </div>
                 </form>
             </main>
