@@ -7,26 +7,5 @@ header div.banner-principal img.banner-principal-img{
     background-size: cover;
     min-width: 100%;
     max-height: 838px;
-    min-height: 400px;
 }
-
-div.banner-principal-saiba-mais-grende{
-    position: absolute;
-    top: 45%;
-    left: 48%;
-    padding: 1rem 2rem;
-    background-color: #000;
-    box-shadow: 0 1px 10px #333;
-}
-
-div.banner-principal-saiba-mais-grende:hover{
-    opacity: .8;
-}
-
-div.banner-principal-saiba-mais-grende a{
-    text-decoration: none;
-    color: #FFF;
-    font-size: 110%;
-}
-
 
