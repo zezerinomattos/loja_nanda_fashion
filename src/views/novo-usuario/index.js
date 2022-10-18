@@ -10,6 +10,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 // MY IMPORTS
 import './style.css';
 import logo from '../../assets/logo-Nanda.png';
+import Navbar from '../../components/navbar';
 
 function NovoUsuario(){
 
@@ -54,30 +55,33 @@ function NovoUsuario(){
     }
 
     return(
-        <div className="text-center ">
-            <main className="login-content form-signin d-flex">
-                <form className='mx-auto'>
-                    <img className="my-5" src={logo} alt="Logo Nanda Fashion" width="110" height="85" />
-                    <h1 className="h3 mb-3 fw-normal">Cadastrar novo usuário</h1>
+        <>
+            <Navbar />
+            <div className="text-center ">
+                <main className="login-content form-signin d-flex">
+                    <form className='mx-auto'>
+                        <img className="my-5" src={logo} alt="Logo Nanda Fashion" width="110" height="85" />
+                        <h1 className="h3 mb-3 fw-normal">Cadastrar novo usuário</h1>
 
-                    <input onChange={(e) => setEmail(e.target.value)} type="email" value={email} className="form-control" id="floatingInput" placeholder="E-mail" />
-                
-                    <input onChange={(e) => setSenha(e.target.value)} type="password" value={senha} className="form-control my-2" id="floatingPassword" placeholder="Senha" />
+                        <input onChange={(e) => setEmail(e.target.value)} type="email" value={email} className="form-control" id="floatingInput" placeholder="E-mail" />
                     
-                    {
-                        carregando ? <div class="spinner-border text-danger" role="status"><span class="visually-hidden">Loading...</span></div>
-                        :
-                        <button onClick={cadastrar} className="btn-login w-100 btn btn-lg btn-primary my-1" type="button">Cadastrar</button> 
-                    }
-                    
-                    <div className='msg-login my-3 text-center'>
-                        {msgTipo === 'sucesso' && <span><strong>Wow! </strong>Você Cadastrou com Sucesso!</span>}
-                        {msgTipo === 'erro' && <span><strong>Ops! </strong>{msg}</span>}
-                    </div>
-   
-                </form>
-            </main>
-        </div>
+                        <input onChange={(e) => setSenha(e.target.value)} type="password" value={senha} className="form-control my-2" id="floatingPassword" placeholder="Senha" />
+                        
+                        {
+                            carregando ? <div class="spinner-border text-danger" role="status"><span class="visually-hidden">Loading...</span></div>
+                            :
+                            <button onClick={cadastrar} className="btn-login w-100 btn btn-lg btn-primary my-1" type="button">Cadastrar</button> 
+                        }
+                        
+                        <div className='msg-login my-3 text-center'>
+                            {msgTipo === 'sucesso' && <span><strong>Wow! </strong>Você Cadastrou com Sucesso!</span>}
+                            {msgTipo === 'erro' && <span><strong>Ops! </strong>{msg}</span>}
+                        </div>
+    
+                    </form>
+                </main>
+            </div>
+        </>
     );
 }
 
