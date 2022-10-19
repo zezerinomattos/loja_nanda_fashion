@@ -7,5 +7,64 @@ header div.banner-principal img.banner-principal-img{
     background-size: cover;
     min-width: 100%;
     max-height: 638px;
+    min-height: 350px;
 }
 
+/*--------------------------*/
+/*   SECTION OFERTAS       */
+/*--------------------------*/
+
+section.produto-ofertas{
+    margin-bottom: 5rem;
+}
+
+section.produto-ofertas h2{
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+    color: #FE9E8E;
+}
+
+div.produto-ofertas-mestre{
+    width: 100%;
+    margin: auto;
+    padding: 20px 4%;
+}
+
+/*--------------------------*/
+/*   SECTION TENDENCIA       */
+/*--------------------------*/
+
+section.produto-tendencia h2{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #FE9E8E;
+}
+
+div.produto-tendencia-mestre{
+    width: 100%;
+    margin: auto;
+    
+    padding: 20px 4%;
+}
+
+/*--------------------------*/
+/*   SECTION MAIS VENDIDOS  */
+/*--------------------------*/
+
+section.mais-vendidos{
+    
+}
+
+div.mais-vendidos-mestre h2{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #FE9E8E;
+}
+
+div.mais-vendidos-d{
+    width: 100%;
+    margin: auto;
+    
+    padding: 20px 4%;
+}
