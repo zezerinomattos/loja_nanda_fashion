@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import './style.css';
 import imgCapaHeader from '../../assets/img-nanda-fashion003.jpg';
 import Navbar from '../../components/navbar';
+import ProdutoCard from '../../components/produtos-card';
 
 function Home(){
     
@@ -17,6 +18,8 @@ function Home(){
                     <img src={imgCapaHeader} class="img-fluid banner-principal-img " alt="Imagem Capa" />
                 </div>
             </header>
+
+            <ProdutoCard />
 
             <h1>{useSelector(state => state.usuarioLogado)}</h1>
             <h1>Logado: {useSelector(state => state.usuarioEmail)}</h1>
