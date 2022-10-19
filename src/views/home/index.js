@@ -12,7 +12,7 @@ import ProdutoCard from '../../components/produtos-card';
 
 function Home(){
     
-    const [produto, setProduto] = useState([]);
+    const [produtos, setProduto] = useState([]);
     let listaProdutos = [];
 
     useEffect(() => {
@@ -43,8 +43,26 @@ function Home(){
             <section className='row produto-ofertas'>
                 <h2>OFERTAS</h2>
                 <div className='row produto-ofertas-mestre'>
-                    {produto.map(item => item.secaoDestacar === "Ofertas" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
+                    {produtos.map(item => item.secaoDestacar === "Ofertas" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
                                 promocao={item.promocao} valor={item.valor} img={item.imagem} visualizacoes={item.visualizacoes} /> : null )}
+                </div>
+            </section>
+
+            <section className='row produto-tendencia mt-5'>
+                <h2>TENDÊNCIA</h2>
+                <div className='row produto-d-mestre'>
+                    {produtos.map(item => item.secaoDestacar === "Tendência" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
+                        promocao={item.promocao} valor={item.valor} img={item.imagem} /> : null)} 
+                </div>
+            </section>
+
+            <section className='row mais-vendidos mt-5'>
+                <div className='row mais-vendidos-mestre mt-5'>
+                    <h2>MAIS VENDIDOS</h2>
+                    <div className='row mais-vendidos-d'>
+                        {produtos.map(item => item.secaoDestacar === "Mais vendidos" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
+                            promocao={item.promocao} valor={item.valor} img={item.imagem} /> : null)} 
+                    </div>
                 </div>
             </section>
 
