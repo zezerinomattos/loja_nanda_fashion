@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, Navigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { db, auth } from '../../config/firebase';
+import firebase from '../../config/firebase';
 import 'firebase/auth';
-//import { signInWithEmailAndPassword } from 'firebase/auth';
-
 
 // MY IMPORTS
 import './style.css';
 import logo from '../../assets/logo-Nanda.png';
-import { signInWithEmailAndPassword } from 'firebase/auth';
 
 function Login(){
 
@@ -24,7 +21,7 @@ function Login(){
 
     async function logar(){
         setCarregando(1)
-        await signInWithEmailAndPassword(auth, email, senha)
+        await firebase.auth().signInWithEmailAndPassword(email, senha)
             .then(resposta => {
                 setCarregando(0);
                 setMsgTipo('sucesso');

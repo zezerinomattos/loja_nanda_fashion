@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
-import { db, auth } from '../../config/firebase';
+import firebase from '../../config/firebase';
 import 'firebase/auth';
 
 // MY IMPORTS
 import './style.css';
 import logo from '../../assets/logo-Nanda.png';
-import { sendPasswordResetEmail } from 'firebase/auth';
-import { Link } from 'react-router-dom';
 
 function RecuperarSenha(){
 
@@ -16,7 +15,7 @@ function RecuperarSenha(){
     const [msg, setMsg] = useState();
 
     async function recuperarSenha(){
-        await sendPasswordResetEmail(auth ,email)
+        await firebase.auth().sendPasswordResetEmail(email)
          .then(resposta => {
             setMsg('Enviamos um link no seu email para você redefinir a senha!');
          })

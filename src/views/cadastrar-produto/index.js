@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { db, auth, storage } from '../../config/firebase';
+import firebase from '../../config/firebase';
 import 'firebase/auth';
-import { ref, uploadBytesResumable } from 'firebase/storage';
-
 
 //MY IMPORTS
 import './style.css';
@@ -27,13 +24,38 @@ function CadastrarProduto(){
     const [imagem, setImagen] = useState();
     const usuárioEmail = useSelector(state => state.usuarioEmail);
 
-    
+    const storage = firebase.storage();
+    const db = firebase.firestore();
 
-    async function cadastrarProduto(){
+
+    async function cadastrar(){
         setMsgTipo(null);
         setCarregando(1);
 
-        
+        await storage.ref(`imagens/${imagem.name}`).put(imagem)
+            .then(() => {
+                db.collection('nandaFashion').add({
+                    nomeProduto: nomeProduto,
+                    descricao: descricao,
+                    tipo: tipo,
+                    destacar: destacar,
+                    secaoDestacar: secaoDestacar,
+                    valor: valor,
+                    promocao: promocao,
+                    usuario: usuárioEmail,
+                    visualizacoes: 0,
+                    imagem: imagem.name,
+                    criacao: new Date()
+                });
+            })
+            .then(() => {
+                setMsgTipo('sucesso');
+                setCarregando(0);
+            })
+            .catch(erro => {
+                setMsgTipo('erro')
+                setCarregando(0);
+            });    
     }
 
     return(
@@ -116,10 +138,10 @@ function CadastrarProduto(){
 
                 {imagem ? <img src={URL.createObjectURL(imagem)} alt="Imagem" width="150" height="100" /> : ""}
                 
-                <div className="row">
+                <div className="row mt-4">
                     {
                         carregando > 0 ? <div class="spinner-border text-warning text-center" role="status"><span class="visually-hidden">Loading...</span></div>
-                        : <button className="btn-login w-100 btn btn-lg btn-primary my-1" type="button" onClick={cadastrarProduto}>Publicar Produto</button>
+                        : <button className="btn-login w-100 btn btn-lg btn-primary my-1" type="button" onClick={cadastrar}>Publicar Produto</button>
                     }
                 </div>
 

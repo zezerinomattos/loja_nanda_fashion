@@ -1,10 +1,8 @@
 import React, { useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, Navigate } from 'react-router-dom';
 
-import { db, auth } from '../../config/firebase';
+import firebase from '../../config/firebase';
 import 'firebase/auth';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 
 // MY IMPORTS
@@ -23,7 +21,7 @@ function NovoUsuario(){
     async function cadastrar(){
         setMsgTipo(null);
         setCarregando(1);
-        await createUserWithEmailAndPassword(auth, email, senha)
+        await firebase.auth().createUserWithEmailAndPassword(email, senha)
             .then(resposta => {
                 setCarregando(0);
                 setMsgTipo('sucesso');
