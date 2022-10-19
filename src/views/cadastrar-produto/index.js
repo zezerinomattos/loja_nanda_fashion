@@ -17,6 +17,7 @@ function CadastrarProduto(){
     const [nomeProduto, setNomeProduto] = useState();
     const [descricao, setDescricao] = useState();
     const [tipo, setTipo] = useState();
+    const [secaoProduto, setSecaoProduto] = useState();
     const [destacar, setDestacar] = useState();
     const [secaoDestacar, setSecaoDestacar] = useState();
     const [valor, setValor] = useState();
@@ -38,6 +39,7 @@ function CadastrarProduto(){
                     nomeProduto: nomeProduto,
                     descricao: descricao,
                     tipo: tipo,
+                    secaoProduto: secaoProduto,
                     destacar: destacar,
                     secaoDestacar: secaoDestacar,
                     valor: valor,
@@ -70,7 +72,7 @@ function CadastrarProduto(){
             <form className="col-md-8 col-sm-10 my-3 mx-auto">
                 <div className="form-group my-4 w-100">
                     <label>Nome do Produto</label>
-                    <input type="text" className="form-control" onChange={(e) => setNomeProduto(e.target.value)}/>
+                    <input type="text" className="form-control" onChange={(e) => setNomeProduto(e.target.value.toUpperCase())}/>
                 </div>
 
                 <div className="form-group mb-5 w-100">
@@ -86,6 +88,19 @@ function CadastrarProduto(){
                             <option>Feminino</option>
                             <option>Masculino</option>
                             <option>Calçados</option>
+                        </select>                  
+                    </div>
+
+                    <div className="form-group col-2 mx-2">
+                        <label>Seção do Produto</label>
+                        <select type="text" className="form-control" onChange={(e) => setSecaoProduto(e.target.value)}>
+                            <option disabled selected value >---Selecione um Tipo--</option>
+                            <option>Calça</option>
+                            <option>Vestidos / Macacão</option>
+                            <option>Shorts</option>
+                            <option>Body / Cropped</option>
+                            <option>T-shirt</option>
+                            <option>Conjuntos</option>
                         </select>                  
                     </div>
 
