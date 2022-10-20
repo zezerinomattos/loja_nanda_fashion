@@ -1,0 +1,44 @@
+footer{
+    
+    background-color: #A65E52;
+}
+
+footer div.footer-mestre{
+    display: flex;
+    flex-flow: row;
+    margin-top: 2rem;
+}
+
+footer div.footer-mestre ul li a{
+    font-size: 120%;
+    color: #000000;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+footer div.footer-mestre ul li a:hover{
+    color: #FEE1D1;
+}
+
+footer div.footer-mestre ul.cartoes-credito{
+    width: 35%;
+    margin: auto;
+}
+
+footer div.footer-mestre ul.cartoes-credito li{
+    width: 20%;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-shadow: -4px  4px 6px  #632D0B;
+}
+
+footer div.footer-mestre ul.cartoes-credito li img{
+    max-width: 100%;
+}
+
+footer div.footer-mestre p{
+    color: #000000;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 4rem;
+}
+

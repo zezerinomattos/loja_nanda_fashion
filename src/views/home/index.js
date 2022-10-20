@@ -9,6 +9,7 @@ import firebase from '../../config/firebase';
 import imgCapaHeader from '../../assets/img-nanda-fashion003.jpg';
 import Navbar from '../../components/navbar';
 import ProdutoCard from '../../components/produtos-card';
+import Footer from '../../components/footer';
 
 function Home(){
     
@@ -27,7 +28,9 @@ function Home(){
             setProduto(listaProdutos);
         })
         .catch(erro => {
-            alert(erro);
+            if(erro.message === 'FirebaseError: [code=resource-exhausted]: Quota exceeded.'){
+                alert('Foi excedido o limite diário no banco!');
+            }       
         });
     });
 
@@ -65,6 +68,8 @@ function Home(){
                     </div>
                 </div>
             </section>
+
+            <Footer />
 
         </div>
     );

@@ -14,7 +14,7 @@ function Navbar(){
     return(
         <nav className="navbar navbar-expand-lg ">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#"><img src={logo} alt="Logo loja" className='img-navebar-logo' /></a>
+                <Link className="navbar-brand" href="#"><img src={logo} alt="Logo loja" className='img-navebar-logo' /></Link>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
