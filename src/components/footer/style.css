@@ -56,4 +56,37 @@ footer div.footer-mestre p{
 }
 
 
+/*------------------------------------------*/
+/*             FOOTER PEQUENO               */
+/*------------------------------------------*/
+footer{
+    height: 100vh;
+}
+
+footer div.footer-mestre-pequeno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+footer div.footer-mestre-pequeno div.footer-mestre-cartoes-pequeno{
+    border: 2px solid #632D0B;
+}
+
+footer div.footer-mestre-pequeno h1{
+    text-align: center;
+}
+
+footer div.footer-mestre-pequeno ul.cartoes-credito-pequeno{
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+
+footer div.footer-mestre-pequeno ul.cartoes-credito-pequeno li{
+    margin: 1% 1%;
+}
+
+
 
