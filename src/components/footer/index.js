@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
@@ -15,6 +15,12 @@ import samsung from '../../assets/samsungplay.png';
 
 function Footer(){
 
+    const [mediaTela, setMediaTela] = useState();
+
+    useEffect(() => {
+        //window.innerWidth > 800 ? <TelaGrande /> : <TelaPequena /> 
+        window.innerWidth > 800 ? setMediaTela('grande') : setMediaTela('pequena');
+    }, []);
 
     const TelaGrande = () => {
 
@@ -139,9 +145,8 @@ function Footer(){
 
     return(
         <>
-            {
-                window.innerWidth > 800 ? <TelaGrande /> : <TelaPequena />       
-            }
+            {mediaTela === 'grande' && <TelaGrande /> }
+            {mediaTela === 'pequena' && <TelaPequena /> }
         </>
         
     );
