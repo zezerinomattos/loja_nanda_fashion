@@ -43,7 +43,7 @@ function Home(){
                 </div>
             </header>
 
-            <section className='row produto-ofertas'>
+            <section className='row produto-ofertas col-12'>
                 <h2>OFERTAS</h2>
                 <div className='row produto-ofertas-mestre'>
                     {produtos.map(item => item.secaoDestacar === "Ofertas" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
@@ -51,7 +51,7 @@ function Home(){
                 </div>
             </section>
 
-            <section className='row produto-tendencia mt-5'>
+            <section className='row produto-tendencia mt-5 col-12'>
                 <h2>TENDÊNCIA</h2>
                 <div className='row produto-d-mestre'>
                     {produtos.map(item => item.secaoDestacar === "Tendência" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
@@ -59,7 +59,7 @@ function Home(){
                 </div>
             </section>
 
-            <section className='row mais-vendidos mt-5'>
+            <section className='row mais-vendidos mt-5 col-12'>
                 <div className='row mais-vendidos-mestre mt-5'>
                     <h2>MAIS VENDIDOS</h2>
                     <div className='row mais-vendidos-d'>
