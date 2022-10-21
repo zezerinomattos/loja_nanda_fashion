@@ -9,6 +9,10 @@ footer div.footer-mestre{
     margin-top: 2rem;
 }
 
+footer div.footer-mestre div.footer-mestre-nav{
+    width: 25%;
+}
+
 footer div.footer-mestre ul li a{
     font-size: 120%;
     color: #000000;
@@ -34,6 +38,11 @@ footer div.footer-mestre ul.cartoes-credito li{
 
 footer div.footer-mestre ul.cartoes-credito li img{
     max-width: 100%;
+}
+
+footer div.footer-mestre div.footer-mestre-cartoes{
+    width: 50%;
+    text-align: center;
 }
 
 footer div.footer-mestre p{
