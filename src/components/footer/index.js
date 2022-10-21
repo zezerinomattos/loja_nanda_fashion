@@ -18,7 +18,7 @@ function Footer(){
     const TelaGrande = () => {
 
         return(
-            <footer class="footer navbar-fixed-bottom container-fluid">
+            <footer class="footer container-fluid">
                 <div className='container my-3 footer-mestre'>
                     <div className='flex-columm footer-mestre-nav'>
                         <h1 className='h5 mt-3'>NAVEGAÇÃO</h1>
