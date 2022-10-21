@@ -15,6 +15,7 @@ import samsung from '../../assets/samsungplay.png';
 
 function Footer(){
 
+
     const TelaGrande = () => {
 
         return(
@@ -24,13 +25,13 @@ function Footer(){
                         <h1 className='h5 mt-3'>NAVEGAÇÃO</h1>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
+                                <Link class="nav-link" to="/">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Produtos</a>
+                                <Link class="nav-link" to="/produtos">Produtos</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contato</a>
+                                <Link class="nav-link" to="/contato">Contato</Link>
                             </li>
                         </ul>
                     </div>
@@ -56,6 +57,10 @@ function Footer(){
                             </li>
                             <br/>
                             <li class="nav-item">
+                                <i class="fa-brands fa-instagram"></i> @nanda_fashion_roupas
+                            </li>
+                            <br/>
+                            <li class="nav-item">
                                 <i class="fa-solid fa-envelope"></i> nanda.buenop@homail.com
                             </li>
                             <br/>
@@ -66,7 +71,7 @@ function Footer(){
                     </div>
 
                 </div>
-                <p className='mt-5'><a class="nav-link" href="https://zezerino.com.br/">Copyright ©2022 Zezerino Dev</a></p>
+                <p className='mt-5 text-center'><a class="nav-link" href="https://zezerino.com.br/">Copyright ©2022 Zezerino Dev</a></p>
             </footer>
         );
 
@@ -80,13 +85,13 @@ function Footer(){
                         <h1 className='h5 my-3'>NAVEGAÇÃO</h1>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
+                                <Link class="nav-link" to="/">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Produtos</a>
+                                <Link class="nav-link" to="/produtos">Produtos</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contato</a>
+                                <Link class="nav-link" to="/contato">Contato</Link>
                             </li>
                         </ul>
                     </div>
@@ -109,6 +114,10 @@ function Footer(){
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <i class="fa-brands fa-whatsapp"></i> 48991589625
+                            </li>
+                            <br/>
+                            <li class="nav-item">
+                                <i class="fa-brands fa-instagram"></i> @nanda_fashion_roupas
                             </li>
                             <br/>
                             <li class="nav-item">
