@@ -10,6 +10,7 @@ import NovoUsuario from '../views/novo-usuario';
 import Home from '../views/home';
 import RecuperarSenha from '../views/recuperar-senha';
 import CadastrarProduto from '../views/cadastrar-produto';
+import Produtos from '../views/produtos';
 
 export default function Rotas(){
     return(
@@ -21,6 +22,7 @@ export default function Rotas(){
                     <Route path='/novousuario' element={<NovoUsuario />} />
                     <Route path='/secuperarsenha' element={<RecuperarSenha />} />
                     <Route path='/cadastrarproduto' element={<CadastrarProduto />} />
+                    <Route path='/produtos' element={<Produtos />} />
                 </Routes>
             </BrowserRouter>
         </Provider>

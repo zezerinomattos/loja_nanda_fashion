@@ -1,6 +1,10 @@
 footer{
-    
-    background-color: #A65E52;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background-color: #FEE1D1;
+    border-top: 2px solid #632D0B;
+    box-shadow: 0px 0px 6px 4px #632D0B;
 }
 
 footer div.footer-mestre{
@@ -51,17 +55,5 @@ footer div.footer-mestre p{
     margin-top: 4rem;
 }
 
-div.footer-pequeno{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-}
 
-div.footer-pequeno-cartoes{
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    
-}
 
