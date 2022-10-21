@@ -59,7 +59,7 @@ footer div.footer-mestre p{
 /*------------------------------------------*/
 /*             FOOTER PEQUENO               */
 /*------------------------------------------*/
-footer{
+footer.pequeno{
     height: 100vh;
 }
 

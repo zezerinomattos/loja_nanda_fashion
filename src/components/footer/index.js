@@ -74,7 +74,7 @@ function Footer(){
 
     const TelaPequena = () =>{
         return(
-            <footer class="footer navbar-fixed-bottom container-fluid">
+            <footer class="pequeno footer navbar-fixed-bottom container-fluid">
                 <div className='container my-3 footer-mestre-pequeno'>
                     <div className='flex-columm footer-mestre-nav mt-3'>
                         <h1 className='h5 my-3'>NAVEGAÇÃO</h1>
