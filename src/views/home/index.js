@@ -62,12 +62,10 @@ function Home(){
             </section>
 
             <section className='row mais-vendidos mt-5 col-12'>
+                <div className='container-fluid img-mais-vendidos col-10'>
+                    <img src={imgCapaMaisVendidos} class="img-fluid" alt="Imagem Capa" />
+                </div>
                 <div className='row mais-vendidos-mestre mt-5'>
-
-                    <div className='container-fluid p-0 banner-principal mb-5'>
-                        <img src={imgCapaMaisVendidos} class="img-fluid banner-principal-img " alt="Imagem Capa" />
-                    </div>
-
                     <h2>MAIS VENDIDOS</h2>
                     <div className='row mais-vendidos-d'>
                         {produtos.map(item => item.secaoDestacar === "Mais vendidos" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
