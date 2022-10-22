@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 // MEUS IMPORTS
 import './style.css';
 import firebase from '../../config/firebase';
+
 import imgCapaHeader from '../../assets/img-nanda-fashion003.jpg';
+import imgCapaMaisVendidos from '../../assets/img-carrossel-mais-vendidos.jpg';
 import Navbar from '../../components/navbar';
 import ProdutoCard from '../../components/produtos-card';
 import Footer from '../../components/footer';
@@ -61,6 +63,11 @@ function Home(){
 
             <section className='row mais-vendidos mt-5 col-12'>
                 <div className='row mais-vendidos-mestre mt-5'>
+
+                    <div className='container-fluid p-0 banner-principal mb-5'>
+                        <img src={imgCapaMaisVendidos} class="img-fluid banner-principal-img " alt="Imagem Capa" />
+                    </div>
+
                     <h2>MAIS VENDIDOS</h2>
                     <div className='row mais-vendidos-d'>
                         {produtos.map(item => item.secaoDestacar === "Mais vendidos" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
