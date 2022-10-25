@@ -81,7 +81,7 @@ function CadastrarProduto(){
         setMsgTipo(null);
         setCarregando(1);
 
-        await storage.ref(`imagens/${imagem.name}`).put(imagem)
+        await storage.ref(`imagens/${imagemNova.name}`).put(imagemNova)
             .then(() => {
                 db.collection('nandaFashion').add({
                     nomeProduto: nomeProduto,
@@ -94,7 +94,7 @@ function CadastrarProduto(){
                     promocao: promocao,
                     usuario: usuárioEmail,
                     visualizacoes: 0,
-                    imagem: imagem.name,
+                    imagem: imagemNova.name,
                     criacao: new Date()
                 });
             })
@@ -196,7 +196,7 @@ function CadastrarProduto(){
 
                 <div className="form-group mb-5 w-100">
                     <label>Upload da Imagem {id ? '(Caso queira manter a mesma IMAGEM não precisa escolher uma nova IMAGEM)' : null} </label>
-                    <input type="file" className="form-control" onChange={(e) => setImagen(e.target.files [0])}/>
+                    <input type="file" className="form-control" onChange={(e) => setImagemNova(e.target.files [0])}/>
                 </div>
 
                 {imagemNova ? <img src={URL.createObjectURL(imagemNova)} alt="Imagem" width="150" height="100" /> : ""}
