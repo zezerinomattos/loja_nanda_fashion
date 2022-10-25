@@ -27,6 +27,7 @@ export default function Rotas(){
                     <Route path='/produtos' element={<Produtos />} />
                     <Route path='/contato' element={<Contato />} />
                     <Route path='/detalhesproduto/:id' element={<DetalhesProdutos />} />
+                    <Route path='/editarevento/:id' element={<CadastrarProduto />} />
                 </Routes>
             </BrowserRouter>
         </Provider>

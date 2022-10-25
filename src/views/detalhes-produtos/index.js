@@ -93,7 +93,7 @@ function DetalhesProdutos(props){
                         </div>
 
                         {
-                            usuarioLogado ? <Link to="" className='btn-editar' ><i class="fas fa-pen-square fa-3x"></i></Link>
+                            usuarioLogado ? <Link to={`/editarevento/${id}`} className='btn-editar' ><i class="fas fa-pen-square fa-3x"></i></Link>
                             : ''
                         }
                     </div>
