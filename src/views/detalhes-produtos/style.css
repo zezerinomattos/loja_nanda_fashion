@@ -11,17 +11,12 @@ div.detalhes-mestre-img img{
     height: 450px;
 }
 
-div.detalhes-mestre-descricao{
-    height: 200px;
-    
-}
-
 div.detalhes-mestre-descricao h1, span{
     font-family: 'Titillium Web', sans-serif;
 }
 
 div.detalhes-mestre-descricao p{
-    width: 75%;
+    width: 80%;
     font-size: 80%;
     margin-top: 1rem;
 }
@@ -31,6 +26,7 @@ div.detalhes-mestre-descricao div.botao-comprar{
     height: 3rem;
     text-align: center;
     background-color: #f361a5;
+    transition: .3s ease-in;
 
     cursor: pointer;
 }
@@ -48,6 +44,7 @@ div.detalhes-mestre-descricao div.botao-comprar a{
 div.detalhes-mestre-descricao div.redes-sociais i{
     font-size: 200%;
     color: #1a1919;
+    transition: .3s ease-in;
 }
 
 div.detalhes-mestre-descricao div.redes-sociais i:hover{
@@ -58,4 +55,12 @@ div.descricao-mestre{
     width: 80%;
     margin-bottom: 80px;
     margin-top: 60px;
+}
+
+a.btn-editar{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #1a1919;
+    transition: .3s ease-in;
 }

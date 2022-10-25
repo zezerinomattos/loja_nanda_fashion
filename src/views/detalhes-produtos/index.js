@@ -52,6 +52,8 @@ function DetalhesProdutos(){
                     </p>
                 </div>
 
+                <Link to="" className='btn-editar' ><i class="fas fa-pen-square fa-3x"></i></Link>
+
             </div>
             <Footer />
         </>
