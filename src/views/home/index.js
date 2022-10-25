@@ -48,7 +48,7 @@ function Home(){
             <section className='row produto-ofertas col-12'>
                 <h2>OFERTAS</h2>
                 <div className='row produto-ofertas-mestre'>
-                    {produtos.map(item => item.secaoDestacar === "Ofertas" ? <ProdutoCard key={item.id} id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
+                    {produtos.map(item => item.secaoDestacar === "Ofertas" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
                                 promocao={item.promocao} valor={item.valor} img={item.imagem} visualizacoes={item.visualizacoes} /> : null )}
                 </div>
             </section>
@@ -57,7 +57,7 @@ function Home(){
                 <h2>TENDÊNCIA</h2>
                 <div className='row produto-d-mestre'>
                     {produtos.map(item => item.secaoDestacar === "Tendência" ? <ProdutoCard key={item.id} id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
-                        promocao={item.promocao} valor={item.valor} img={item.imagem} /> : null)} 
+                        promocao={item.promocao} valor={item.valor} img={item.imagem} visualizacoes={item.visualizacoes} /> : null)} 
                 </div>
             </section>
 
@@ -69,7 +69,7 @@ function Home(){
                     <h2>MAIS VENDIDOS</h2>
                     <div className='row mais-vendidos-d'>
                         {produtos.map(item => item.secaoDestacar === "Mais vendidos" ? <ProdutoCard key={item.id} id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
-                            promocao={item.promocao} valor={item.valor} img={item.imagem} /> : null)} 
+                            promocao={item.promocao} valor={item.valor} img={item.imagem} visualizacoes={item.visualizacoes} /> : null)} 
                     </div>
                 </div>
             </section>
