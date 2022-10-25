@@ -1,9 +1,9 @@
-div.detalhes-mestre h1.titulo{
-    font-family: 'Fredericka the Great', cursive;
+div.secao-detalhes-produtos{
+    margin-bottom: 60px;
 }
 
-div.detalhes-mestre-img{
-    background-color: aqua;
+div.detalhes-mestre h1.titulo{
+    font-family: 'Fredericka the Great', cursive;
 }
 
 div.detalhes-mestre-img img{
@@ -24,4 +24,38 @@ div.detalhes-mestre-descricao p{
     width: 75%;
     font-size: 80%;
     margin-top: 1rem;
+}
+
+div.detalhes-mestre-descricao div.botao-comprar{
+    width: 75%;
+    height: 3rem;
+    text-align: center;
+    background-color: #f361a5;
+
+    cursor: pointer;
+}
+
+div.detalhes-mestre-descricao div.botao-comprar:hover{
+    opacity: 0.8;
+}
+
+div.detalhes-mestre-descricao div.botao-comprar a{
+    text-decoration: none;   
+    font-size: 200%;
+    color: #000000;
+}
+
+div.detalhes-mestre-descricao div.redes-sociais i{
+    font-size: 200%;
+    color: #1a1919;
+}
+
+div.detalhes-mestre-descricao div.redes-sociais i:hover{
+    opacity: 0.8;
+}
+
+div.descricao-mestre{
+    width: 80%;
+    margin-bottom: 80px;
+    margin-top: 60px;
 }
