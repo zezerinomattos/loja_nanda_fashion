@@ -12,6 +12,7 @@ import RecuperarSenha from '../views/recuperar-senha';
 import CadastrarProduto from '../views/cadastrar-produto';
 import Produtos from '../views/produtos';
 import Contato from '../views/contato';
+import DetalhesProdutos from '../views/detalhes-produtos';
 
 export default function Rotas(){
     return(
@@ -25,6 +26,7 @@ export default function Rotas(){
                     <Route path='/cadastrarproduto' element={<CadastrarProduto />} />
                     <Route path='/produtos' element={<Produtos />} />
                     <Route path='/contato' element={<Contato />} />
+                    <Route path='/detalhesproduto' element={<DetalhesProdutos />} />
                 </Routes>
             </BrowserRouter>
         </Provider>
