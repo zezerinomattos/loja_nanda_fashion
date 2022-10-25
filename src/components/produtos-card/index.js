@@ -35,7 +35,7 @@ function ProdutoCard({key, id, titulo, descricao, promocao, valor, img, visualiz
                 </div>
                 <div className="row rodape-card dflex align-items-center">
                     <div className="col-6 ">
-                        <Link to={'/produtosdetalhes/' + id} className="btn btn-sm btn-detalhes mb-2">+DETALHES</Link>
+                        <Link to={'/detalhesproduto/' + id } className="btn btn-sm btn-detalhes mb-2">+DETALHES</Link>
                     </div>
 
                     <div className='col-6 text-right rodape-visualizacoes'>
