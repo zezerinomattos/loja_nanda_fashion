@@ -15,13 +15,14 @@ function DetalhesProdutos(props){
     const [produto, setProduto] = useState({});
     const [urlImg, setUrlImg] = useState({});
     const {id} = useParams();
+    
 
     useEffect(() => {
         firebase.firestore().collection('nandaFashion').doc(id).get()
             .then(resultado => {
                 setProduto(resultado.data())
 
-                firebase.storage().ref(`imagens/${produto.imagem}`).getDownloadURL()
+                firebase.storage().ref(`imagens/${resultado.data().imagem}`).getDownloadURL()
                     .then(url => setUrlImg(url));
             });
     })
@@ -34,7 +35,7 @@ function DetalhesProdutos(props){
                     <h1 className='h2 my-4 text-center titulo'>DETALHES DO PRODUTO</h1>
                     <div className='detalhes-mestre-img col-md-6 col-sm-12'>
                         <div className='container'>
-                            <img src={urlImg} className='img-fluid my-2' alt={produto.imagem.name} />
+                            <img src={urlImg} className='img-fluid my-2' alt='imagens de produtos' />
                         </div>
                     </div>
                     <div className='detalhes-mestre-descricao col-md-6 col-sm-12'>

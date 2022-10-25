@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 
 
 // MEUS IMPORTS
 import './style.css';
 import firebase from '../../config/firebase';
 
-function ProdutoCard({key, id, titulo, descricao, promocao, valor, img, visualizacoes}){
+function ProdutoCard({id, titulo, descricao, promocao, valor, img, visualizacoes}){
 
     const [urlImagem, setUrlImagem] = useState();
     
