@@ -56,7 +56,7 @@ function Home(){
             <section className='row produto-tendencia mt-5 col-12'>
                 <h2>TENDÊNCIA</h2>
                 <div className='row produto-d-mestre'>
-                    {produtos.map(item => item.secaoDestacar === "Tendência" ? <ProdutoCard key={item.id} id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
+                    {produtos.map(item => item.secaoDestacar === "Tendência" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
                         promocao={item.promocao} valor={item.valor} img={item.imagem} visualizacoes={item.visualizacoes} /> : null)} 
                 </div>
             </section>
@@ -68,7 +68,7 @@ function Home(){
                 <div className='row mais-vendidos-mestre mt-5'>
                     <h2>MAIS VENDIDOS</h2>
                     <div className='row mais-vendidos-d'>
-                        {produtos.map(item => item.secaoDestacar === "Mais vendidos" ? <ProdutoCard key={item.id} id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
+                        {produtos.map(item => item.secaoDestacar === "Mais vendidos" ? <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
                             promocao={item.promocao} valor={item.valor} img={item.imagem} visualizacoes={item.visualizacoes} /> : null)} 
                     </div>
                 </div>

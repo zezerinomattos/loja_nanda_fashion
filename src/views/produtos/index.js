@@ -40,7 +40,7 @@ function Produtos(){
 
 
                 <section className='produtos-mestre row'>
-                    {produtos.map(item => <ProdutoCard key={item.id} id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
+                    {produtos.map(item => <ProdutoCard id={item.id} titulo={item.nomeProduto} descricao={item.descricao} 
                             promocao={item.promocao} valor={item.valor} img={item.imagem} visualizacoes={item.visualizacoes} />)}
                 </section>
             </main>
