@@ -17,6 +17,7 @@ function DetalhesProdutos(props){
     const {id} = useParams();
     const usuarioLogado = useSelector(state => state.usuarioLogado);
     const [carregando, setCarregando] = useState(1);
+    const [excluido, setExcluido] = useState(0);
     
 
     useEffect(() => {
@@ -40,9 +41,19 @@ function DetalhesProdutos(props){
         }
     }, []);
 
+    function remover(){
+        firebase.firestore().collection('nandaFashion').doc(id).delete()
+            .then(() => {
+                setExcluido(1);
+            })
+    }
+
     return(
         <>
             <Navbar />
+            {
+                excluido ? <Navigate to='/' /> : null
+            }
             <div className='container-fluid secao-detalhes-produtos my-4'>
                 {
                     carregando ? <div className='row mt-5'><div className="spinner-border text-danger mx-auto" role="status"><span className="visually-hidden"></span></div></div>
@@ -94,6 +105,11 @@ function DetalhesProdutos(props){
 
                         {
                             usuarioLogado ? <Link to={`/editarevento/${id}`} className='btn-editar' ><i class="fas fa-pen-square fa-3x"></i></Link>
+                            : ''
+                        }
+
+                        {
+                            usuarioLogado ? <button onClick={remover} type='button' className='btn btn-lg btn-block mt-3 mb-5 btn-remover' >Remover Produto</button>
                             : ''
                         }
                     </div>

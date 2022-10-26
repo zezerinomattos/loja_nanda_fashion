@@ -68,3 +68,16 @@ a.btn-editar{
 a.btn-editar:hover{
     opacity: .9;
 }
+
+button.btn-remover{
+    background-color: #f11616;
+    color: #FFFF;
+    margin-left: 5rem;
+    transition: 1s ease-out;
+}
+
+button.btn-remover:hover{
+    background-color: #690202;
+    color: #FFFF;
+
+}
