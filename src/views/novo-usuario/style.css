@@ -9,6 +9,7 @@ main.login-content{
 main.form-signin form h1{
     color: #A65E52;
     font-weight: bold;
+    font-family: 'Titan One', cursive;
 }
 
 main.form-signin form button.btn-login{
