@@ -32,7 +32,7 @@ function Produtos(){
     return(
         <>
             <Navbar />
-            <main className='my-5'>
+            <main className='my-5 px-4'>
 
                 <form class="d-flex my-5 mx-auto col-11">
                     <input onChange={(e) => setPesquisa(e.target.value.toUpperCase())} class="form-control me-2 pesquisar" type="search" placeholder="Pesquisar" />

@@ -6,8 +6,12 @@ div.detalhes-mestre h1.titulo{
     font-family: 'Fredericka the Great', cursive;
 }
 
+div.img-container{
+    text-align: center;
+}
+
 div.detalhes-mestre-img img{
-    width: 100%;
+    
     height: 450px;
 }
 

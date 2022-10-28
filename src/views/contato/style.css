@@ -6,11 +6,51 @@ main h1{
     text-shadow: 2px 2px rgba(0, 0, 0, 0.438);
 }
 
-div.map{
-    height: 100vh;
-    width: 50%;
+div.iformacoe-redes-sociais{
+    height: auto;
+    box-shadow: -4px -4px 6px #632D0B;
+
+}
+
+div.iformacoe-redes-sociais h3{
+    font-weight: bold;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.iformacoe-redes-sociais p{
+    font-weight: 500;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.iformacoe-redes-sociais div.redes-sociais ion-icon{
+    font-size: 270%;
+    margin-right: 1rem;
+    color: rgb(37, 35, 35);
+}
+
+div.iformacoe-redes-sociais div.redes-sociais ion-icon:hover{
+    opacity: .8;
+}
+
+/*---- MAPA ------*/
+
+div.contato-mestre div.mapa-mestre{
+    height: 750px;
+}
+
+div.contato-mestre div.mapa-mestre div.map{
+    height: 550px;
+    box-shadow: -4px 4px 6px #632D0B;
 }
 
 .map-marker{
     margin-top: -30px;
+}
+
+
+/*----- Form ----------*/
+
+div.contato-mestre div.form-mestre{
+    background-color: aqua;
+    height: 350px;
 }

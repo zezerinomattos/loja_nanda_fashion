@@ -63,7 +63,7 @@ function DetalhesProdutos(props){
                         <div className='row detalhes-mestre col-12'>
                             <h1 className='h2 my-4 text-center titulo'>DETALHES DO PRODUTO</h1>
                             <div className='detalhes-mestre-img col-md-6 col-sm-12'>
-                                <div className='container'>
+                                <div className='container img-container'>
                                     <img src={urlImg} className='img-fluid my-2' alt='imagens de produtos' />
                                 </div>
                             </div>
