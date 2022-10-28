@@ -6,3 +6,11 @@ main h1{
     text-shadow: 2px 2px rgba(0, 0, 0, 0.438);
 }
 
+div.map{
+    height: 100vh;
+    width: 50%;
+}
+
+.map-marker{
+    margin-top: -30px;
+}
