@@ -90,7 +90,6 @@ function DetalhesProdutos(props){
                                     <a className='mx-1' href="https://www.instagram.com/nanda_fashion_roupas/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                                     <a className='mx-1' href="https://www.facebook.com/paris.zenanda" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                                     <a className='mx-1' href="https://wa.me/5548991589625?text=Olá %20Nanda,%20tudo%20bem?" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-
                                 </div>
 
                                 
