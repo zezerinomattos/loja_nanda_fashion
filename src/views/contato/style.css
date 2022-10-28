@@ -35,7 +35,7 @@ div.iformacoe-redes-sociais div.redes-sociais ion-icon:hover{
 /*---- MAPA ------*/
 
 div.contato-mestre div.mapa-mestre{
-    height: 750px;
+    height: auto;
 }
 
 div.contato-mestre div.mapa-mestre div.map{
@@ -51,6 +51,7 @@ div.contato-mestre div.mapa-mestre div.map{
 /*----- Form ----------*/
 
 div.contato-mestre div.form-mestre{
-    background-color: aqua;
-    height: 350px;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    box-shadow: -4px 4px 6px #632D0B;
 }

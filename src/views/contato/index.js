@@ -27,11 +27,11 @@ function Contato(){
                 <h1 className='h1 text-center my-5'>CONTATO</h1>
                 <div className='contato-mestre container'>
                     <div className='mapa-mestre my-5'>
-                        <div className='iformacoe-redes-sociais p-2'>
+                        <div className='iformacoe-redes-sociais p-4'>
                             <h3 className='h3'>CONTATO</h3>
                             <p>
-                                - Entregamos no mesmo dia em Araranguá e região, outras regiões vai depender do praso de entrega dos correios ou transportadora. <br/>
-                                - Em araranguá o valor do freté custa R$10,00 Fora de Araranguá frete a consultar. <br/>
+                                - Entregamos no mesmo dia em Araranguá e região, outras regiões vai depender do prazo de entrega dos correios ou transportadora. <br/>
+                                - Em Araranguá o valor do freté custa R$10,00 Fora de Araranguá frete a consultar. <br/>
                                 - Retiradas podem ser feitas em horario comercial.
                             </p>
 
@@ -69,7 +69,17 @@ function Contato(){
                             }               
                         </div>
                     </div>
-                    <div className='form-mestre mb-5'></div>
+                    <div className='form-mestre mb-5 container mt-3'>
+                        <form className='col-md-8 col-sm-11 mx-auto'>
+                            <h2 className='h3 mt-4'>Deixe seu Feedback</h2>
+
+                            <input className='form-control my-2' type="text" placeholder='Digite seu nome'/>
+                            <input className='form-control my-2' type="email" placeholder='Informe seu e-mail'/>
+                            <input className='form-control my-2' type="text" placeholder='Telefone (Opicional)'/>
+
+                            <textarea className='form-control my-2' cols="30" rows="10"></textarea>
+                        </form>
+                    </div>
                 </div>
             </main>
             <Footer />
