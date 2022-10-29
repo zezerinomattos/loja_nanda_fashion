@@ -18,9 +18,11 @@ function DetalhesProdutos(props){
     const usuarioLogado = useSelector(state => state.usuarioLogado);
     const [carregando, setCarregando] = useState(1);
     const [excluido, setExcluido] = useState(0);
+    const [msgTipo, setMsgTipo] = useState('')
     
 
     useEffect(() => {
+        setMsgTipo('');
         if(carregando){
             firebase.firestore().collection('nandaFashion').doc(id).get()
                 .then(resultado => {
@@ -47,6 +49,7 @@ function DetalhesProdutos(props){
                 setExcluido(1);
             })
     }
+
 
     return(
         <>
@@ -82,7 +85,7 @@ function DetalhesProdutos(props){
                                 </p>
 
                                 <div className='my-5 botao-comprar'>
-                                    <a href="#">COMPRAR</a>
+                                    <a href="https://wa.me/5548991589625?text=Olá %20Nanda,%20tudo%20bem?" target="_blank">COMPRAR</a>
                                 </div>
                                 
                                 <h3 className='h5'>COMPARTILHAR:</h3>

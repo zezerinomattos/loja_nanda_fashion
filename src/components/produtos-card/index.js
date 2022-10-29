@@ -39,7 +39,7 @@ function ProdutoCard({id, titulo, descricao, promocao, valor, img, visualizacoes
                     </div>
 
                     <div className='col-6 text-right rodape-visualizacoes'>
-                        <i class="fas fa-eye"></i> <span>{visualizacoes}</span>
+                        <i class="fas fa-eye ms-2"></i> <span>{visualizacoes}</span>
                     </div>
                 </div>
                 
