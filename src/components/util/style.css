@@ -1,0 +1,24 @@
+/*--------------------------*/
+/*  ELEMENTOS DO HEADER     */
+/*--------------------------*/
+
+div.carrossel-img{
+    max-height: 500px;
+    min-height: 350px;
+}
+
+img.img-destaque{
+    max-height: 500px;
+    min-height: 350px;
+}
+
+/* DEIXANDO INDICADORES DO CARROSSEL EM BOLINHA */
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+}
+
+.carousel-indicators button.active{
+    background-color: #632D0B;
+}

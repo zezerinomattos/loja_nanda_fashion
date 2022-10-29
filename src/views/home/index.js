@@ -13,6 +13,8 @@ import Navbar from '../../components/navbar';
 import ProdutoCard from '../../components/produtos-card';
 import Footer from '../../components/footer';
 
+import { BannerOne, BannerTwo } from '../../components/util';
+
 function Home(){
     
     const [produtos, setProduto] = useState([]);
@@ -40,9 +42,12 @@ function Home(){
         <div>
             <header >
                 <Navbar />
-                <div className='container-fluid p-0 banner-principal'>
+
+                <BannerOne />
+
+                {/* <div className='container-fluid p-0 banner-principal'>
                     <img src={imgCapaHeader} class="img-fluid banner-principal-img " alt="Imagem Capa" />
-                </div>
+                </div> */}
             </header>
 
             <section className='row produto-ofertas col-12'>
