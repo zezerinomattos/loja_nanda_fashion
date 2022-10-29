@@ -22,3 +22,20 @@ img.img-destaque{
 .carousel-indicators button.active{
     background-color: #632D0B;
 }
+
+div.carousel-caption{
+    right: -500px !important;
+}
+
+div.carousel-caption input.carregar-img{
+    width: 20%;
+    margin: auto;
+}
+
+div.carousel-caption button{
+    padding: 10px 20px;
+    background-color: #632D0B;
+    border-radius: 10px;
+    color: #FFFF;
+    border: none;
+}

@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useSelector, useDispatch } from 'react-redux';
 
 // MY IMPORTS
 import './style.css';
 import ImgHeaderFirst from '../../assets/img-nanda-fashion003.jpg';
 
 const BannerOne = (() => {
+    const [imagemNova, setImagemNova] = useState();
+
+    
+
     return(
         <div id="carouselExampleIndicators" className="carousel slide carrossel-mestre" data-bs-ride="carousel">
             <div className="carousel-indicators">
@@ -16,6 +21,15 @@ const BannerOne = (() => {
             <div className="carousel-inner carrossel-img">
                 <div className="carousel-item active">
                     <img src={ImgHeaderFirst} className="d-block w-100 img-destaque" alt="..." />
+                    {
+                        useSelector(state => state.usuarioLogado) > 0 ? 
+                        <div class="carousel-caption d-none d-md-block ">
+                            <input type="file" className="form-control carregar-img" onChange={(e) => setImagemNova(e.target.files [0])}/>
+                            <button type='button' className="btn btn-lg btn-primary my-1" >Salvar Imagem</button>
+                        </div>
+                        : null
+                    }
+                    
                 </div>
                 <div className="carousel-item">
                     <img src="https://via.placeholder.com/350x150" className="d-block w-100" alt="..." />
