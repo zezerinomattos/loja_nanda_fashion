@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useSelector, useDispatch } from 'react-redux';
+import firebase from '../../config/firebase';
+import 'firebase/auth';
 
 // MY IMPORTS
 import './style.css';
@@ -8,8 +10,34 @@ import ImgHeaderFirst from '../../assets/img-nanda-fashion003.jpg';
 
 const BannerOne = (() => {
     const [imagemNova, setImagemNova] = useState();
+    const usuárioEmail = useSelector(state => state.usuarioEmail);
 
-    
+    const storage = firebase.storage();
+    const db = firebase.firestore();
+
+    // function atualizar(){
+    //     if(imagemNova){
+
+    //     }
+ 
+    // }
+
+    async function cadastrar(){
+        await storage.ref(`imagens/${imagemNova.name}`).put(imagemNova)
+            .then(() => {
+                db.collection('nandaFashion').add({
+                    usuario: usuárioEmail,
+                    imagem: imagemNova.name,
+                    criacao: new Date()
+                });
+            })
+            .then(() => {
+                alert('Cadastrado');
+            })
+            .catch(erro => {
+                alert(erro)
+            });    
+    }
 
     return(
         <div id="carouselExampleIndicators" className="carousel slide carrossel-mestre" data-bs-ride="carousel">
@@ -25,7 +53,7 @@ const BannerOne = (() => {
                         useSelector(state => state.usuarioLogado) > 0 ? 
                         <div class="carousel-caption d-none d-md-block ">
                             <input type="file" className="form-control carregar-img" onChange={(e) => setImagemNova(e.target.files [0])}/>
-                            <button type='button' className="btn btn-lg btn-primary my-1" >Salvar Imagem</button>
+                            <button onClick={cadastrar} type='button' className="btn btn-lg btn-primary my-1" >Salvar Imagem</button>
                         </div>
                         : null
                     }
