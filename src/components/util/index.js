@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useSelector, useDispatch } from 'react-redux';
 import firebase from '../../config/firebase';
@@ -10,10 +10,18 @@ import ImgHeaderFirst from '../../assets/img-nanda-fashion003.jpg';
 
 const BannerOne = (() => {
     const [imagemNova, setImagemNova] = useState();
+    const [imagemAtual, setImagenAtual] = useState();
     const usuárioEmail = useSelector(state => state.usuarioEmail);
 
     const storage = firebase.storage();
     const db = firebase.firestore();
+
+    useEffect(() => {
+        firebase.firestore().collection('nandaFashion').get()
+            .then(resultado => {
+                setImagenAtual(resultado.data().imagem);
+            })
+    }, []);
 
     // function atualizar(){
     //     if(imagemNova){
@@ -48,7 +56,7 @@ const BannerOne = (() => {
             </div>
             <div className="carousel-inner carrossel-img">
                 <div className="carousel-item active">
-                    <img src={ImgHeaderFirst} className="d-block w-100 img-destaque" alt="..." />
+                    <img src={imagemAtual} className="d-block w-100 img-destaque" alt="..." />
                     {
                         useSelector(state => state.usuarioLogado) > 0 ? 
                         <div class="carousel-caption d-none d-md-block ">
