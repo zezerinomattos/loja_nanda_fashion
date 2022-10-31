@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 
 // MEUS IMPORTS

@@ -166,6 +166,7 @@ function CadastrarProduto(){
                             <label>Qual seção destacar</label>
                             <select type="text" className="form-control" onChange={(e) => setSecaoDestacar(e.target.value)} value={secaoDestacar && secaoDestacar} >
                                 <option disabled selected value >---Selecione--</option>
+                                <option>Não destacar em Home</option>
                                 <option>Ofertas</option>
                                 <option>Tendência</option>
                                 <option>Mais vendidos</option>

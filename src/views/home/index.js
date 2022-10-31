@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import firebase from '../../config/firebase';
 
-import imgCapaHeader from '../../assets/img-nanda-fashion003.jpg';
 import imgCapaMaisVendidos from '../../assets/img-carrossel-mais-vendidos.jpg';
 import Navbar from '../../components/navbar';
 import ProdutoCard from '../../components/produtos-card';
@@ -42,12 +41,7 @@ function Home(){
         <div>
             <header >
                 <Navbar />
-
                 <BannerOne />
-
-                {/* <div className='container-fluid p-0 banner-principal'>
-                    <img src={imgCapaHeader} class="img-fluid banner-principal-img " alt="Imagem Capa" />
-                </div> */}
             </header>
 
             <section className='row produto-ofertas col-12'>
