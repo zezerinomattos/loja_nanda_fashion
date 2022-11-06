@@ -138,7 +138,7 @@ const BannerOne = (() => {
                     }
                     {
                         useSelector(state => state.usuarioLogado) > 0 ?
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption d-none d-md-block carregamento-img">
                                 <input onChange={(e) => setImagemNovaDois(e.target.files[0]) } type="file" className="form-control"/>
                                 <button type='button' className='btn btn-lg btn-block mt-3 mb-5 btn-cadastro' onClick={cadastrarDois}>Publicar Imagem</button>
                             </div>
@@ -151,7 +151,7 @@ const BannerOne = (() => {
                     }
                     {
                         useSelector(state => state.usuarioLogado) > 0 ?
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption d-none d-md-block carregamento-img">
                                 <input onChange={(e) => setImagemNovaTres(e.target.files[0]) } type="file" className="form-control "/>
                                 <button type='button' className='btn btn-lg btn-block mt-3 mb-5 btn-cadastro' onClick={cadastrarTres}>Publicar Imagem</button>
                             </div>
