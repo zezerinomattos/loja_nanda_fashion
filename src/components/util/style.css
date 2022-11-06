@@ -39,3 +39,9 @@ div.carousel-caption button{
     color: #FFFF;
     border: none;
 }
+
+div.carregamento-img{
+    width: 30%;
+    align-items: flex-end;
+    padding-right: 1rem;
+}

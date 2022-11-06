@@ -30,11 +30,6 @@ function Home(){
             })
             setProduto(listaProdutos);
         })
-        .catch(erro => {
-            if(erro.message === 'FirebaseError: [code=resource-exhausted]: Quota exceeded.'){
-                alert('Foi excedido o limite diário no banco!');
-            }       
-        });
     });
 
     return(
