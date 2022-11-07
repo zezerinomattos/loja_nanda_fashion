@@ -64,7 +64,7 @@ const BannerOne = (() => {
         
         await storage.ref(`fotos/${imagemNovaUm.name}`).put(imagemNovaUm)
             .then(() => {
-                db.collection('testeBanner').add({
+                db.collection('bannersNanda').add({
                     imagemUm: imagemNovaUm.name,
                     criacao: new Date()
                 });
@@ -80,7 +80,7 @@ const BannerOne = (() => {
     async function cadastrarDois(){
         await storage.ref(`fotos/${imagemNovaDois.name}`).put(imagemNovaDois)
         .then(() => {
-            db.collection('testeBanner').add({
+            db.collection('bannersNanda').add({
                 imagemNovaDois: imagemNovaDois.name,
                 criacao: new Date()
             });
@@ -96,7 +96,7 @@ const BannerOne = (() => {
     async function cadastrarTres(){
         await storage.ref(`fotos/${imagemNovaTres.name}`).put(imagemNovaTres)
         .then(() => {
-            db.collection('testeBanner').add({
+            db.collection('bannersNanda').add({
             imagemNovaTres: imagemNovaTres.name,
             criacao: new Date()
             });
