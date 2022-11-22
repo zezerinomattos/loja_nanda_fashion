@@ -18,7 +18,7 @@ function ProdutoCard({id, titulo, descricao, promocao, valor, img, visualizacoes
 
     return(
 
-        <div className="col-md-3 col-sm-12 ">
+        <div className="col-md-3 col-sm-12 mb-5">
             <div className="card-img-mestre">
                 <img src={urlImagem} className="card-img-top img-cartao" alt={img} />
             </div>

@@ -34,11 +34,12 @@ section.produto-tendencia h2{
     color: #FE9E8E;
 }
 
-div.produto-tendencia-mestre{
+div.produto-d-mestre{
     width: 100%;
-    margin: auto;
-    
+    margin: auto;   
     padding: 20px 4%;
+
+    align-items: center;
 }
 
 /*--------------------------*/
