@@ -1,12 +1,12 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyArNdvSHCXChcmh5csONScL5PPC7Xd5BPc",
-  authDomain: "nandafashion-2a31e.firebaseapp.com",
+  apiKey: "Minha chave Key",
+  authDomain: "Meu dominio",
   projectId: "nandafashion-2a31e",
   storageBucket: "nandafashion-2a31e.appspot.com",
-  messagingSenderId: "643806885103",
-  appId: "1:643806885103:web:9d9faf209814c63c16971a",
+  messagingSenderId: "Numero",
+  appId: "Numero",
   measurementId: "G-QM6ZTV506Y"
 };
 
