@@ -2,7 +2,7 @@
 
 ## O que faz essa aplicacão?
 
-Este é um site para venda, onde o usuário pode navegar visualisar detalhes de produto e finalizar a compra diretamente com o vendedor atravéz do seu Whatsapp. Por outro lado o vendedor pode fazer: 
+Este é um site para venda, onde o usuário pode navegar visualisar detalhes de produto e finalizar a compra diretamente com o vendedor através do seu Whatsapp. Por outro lado o vendedor pode fazer: 
 
 [🔑] Autenticação de Usuários <br/>
 [📧] Recuperação de senha com envio de e-mail automático <br/>
