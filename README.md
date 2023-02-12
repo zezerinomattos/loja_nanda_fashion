@@ -2,7 +2,7 @@
 
 ## O que faz essa aplicacão?
 
-Este é um site para venda, onde o usuário pode navegar visualisar detalhes de produto e finalizar a compra diretamente com o vendedor através do seu Whatsapp. Por outro lado o vendedor pode fazer: 
+Apresento-lhes um e-commerce inovador, que permite aos usuários visualizar com detalhes os produtos disponíveis e finalizar suas compras diretamente com o vendedor através da integração do aplicativo de mensagens WhatsApp. Esse projeto foi desenvolvido com o objetivo de oferecer uma experiência de compra simples e eficiente para os usuários.
 
 [🔑] Autenticação de Usuários <br/>
 [📧] Recuperação de senha com envio de e-mail automático <br/>
